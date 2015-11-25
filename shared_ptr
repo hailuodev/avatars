@@ -1,0 +1,30 @@
+//
+//  main.cpp
+//  hh
+//
+//  Created by feng on 15/11/25.
+//  Copyright (c) 2015年 feng. All rights reserved.
+//
+
+#include <iostream>
+#include <memory.h>
+using namespace ::std;
+class ABC{
+public:
+    ABC();
+    ~ABC();
+};
+ABC::ABC(){
+ printf("start\n");
+}
+ABC::~ABC(){
+    printf("end\n");
+};
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    std::cout << "Hello, World!\n";
+    shared_ptr<ABC> p1(new ABC());
+    shared_ptr<ABC> p2 = make_shared<ABC>();
+    return 0;
+}
